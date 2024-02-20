@@ -19,6 +19,7 @@ public class Website {
         if (currentUser != null) {
             userDatabase.SaveNewUsername(currentUser.getUsername(), newName);
             currentUser.setUsername(newName);
+            System.out.println("Change name Successful!");
             return true;
         }
         return false;
