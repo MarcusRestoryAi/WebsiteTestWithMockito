@@ -3,9 +3,11 @@ package test;
 import org.example.Database;
 import org.example.User;
 import org.example.Website;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
@@ -16,8 +18,14 @@ public class WebsiteTest {
 
     @BeforeEach
     public void beforeEach() {
+        System.out.println("Start of new Test!");
         //Mocka en ny Databas
         database = mock(Database.class);
+    }
+
+    @AfterEach
+    public void afterEach() {
+        System.out.println("Test done!");
     }
 
     @Test
@@ -38,6 +46,7 @@ public class WebsiteTest {
         boolean success = website.logIn("Joe", "joe1225");
 
         assertTrue(success);
+        assertEquals(website.currentUser.getUsername(), user.getUsername());
     }
 
 }
