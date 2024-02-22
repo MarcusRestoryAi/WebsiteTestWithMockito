@@ -23,7 +23,8 @@ public class RoomManagerTest {
     @Test
     public void getAvailableRoomsTest() {
         //Skapa ett fördefinierat returvärde
-        ArrayList<String> availableRooms = new ArrayList<String>(Arrays.asList("1", "2", "3", "4", "5"));
+        ArrayList<String> availableRooms =
+                new ArrayList<String>(Arrays.asList("1", "2", "3", "4", "5"));
 
         //Mocka returvärdet
         when(roomManager.getAvailableRooms()).thenReturn(availableRooms);
