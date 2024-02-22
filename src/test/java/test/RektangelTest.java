@@ -13,7 +13,7 @@ public class RektangelTest {
     @BeforeEach
     public void beforeEach() {
         //Skapa ett obejkt av klassen rektangel
-        rektangel = new Rektangel(10, 4);
+        rektangel = new Rektangel(10, 5);
     }
 
 
